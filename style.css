@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.purple {
+    background-color: hsl(263, 55%, 52%);
+}
+
+.grey {
+    background-color: hsl(217, 19%, 35%);
+}
+
+.black {
+    background: hsl(219, 29%, 14%);
+}
+
+.white {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+.estrutura {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 25px;
+}
+
+.item-1 {
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 85%;
+    grid-column: 1 / 3;
+}
+
+.item-2 {
+    grid-column: 3 / 4;
+}
+
+.item-3 {
+    grid-column: 1 / 2;
+}
+
+.item-4 {
+    grid-column: 2 / 4;
+}
+
+.item-5 {
+    grid-column: 4 / 5;
+    grid-row: 3 / 1;
+}
+
+.item {
+    border-radius: 7px;
+    padding: 30px;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2)
+}
+
+.item h1 {
+    margin: 15px 0 20px;
+    font-weight: 400;
+    font-size: 21.2px;
+    color: hsl(0, 0%, 100%);
+}
+
+.item p:last-child {
+    line-height: 1.5;
+}
+
+.picture {
+    display: flex;
+    align-items: center;
+}
+
+.picture img {
+    border-radius: 50%;
+    width: 35px;
+    margin-right: 10px;
+}
+
+.item-1 img,
+.item-4 img {
+    border: 2px solid #a775f2;
+}
+
+.item p:last-child,
+.item small {
+    color: #a4a8ac;
+}
+
+.item-1 p:last-child,
+.item-1 small {
+    color: #a775f2;
+}
+
+.item-3 h1,
+.item-5 h1,
+.item-3 .picture p,
+.item-5 .picture p {
+    color: hsl(217, 19%, 35%);
+}
+
+.item-1 .picture p,
+.item-2 .picture p,
+.item-4 .picture p {
+    color: hsl(0, 0%, 100%);
+}
+
+@media(max-width: 760px) {
+    section {
+        margin: 60px 0;
+    }
+
+    .estrutura {
+        display: block;
+    }
+
+    .estrutura article + article {
+        margin-top: 20px;
+    }
+
+}
